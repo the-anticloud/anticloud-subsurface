@@ -1,0 +1,46 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:375dda34-5283-5d56-9b50-caed295f6ab1",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-05T16:00:45Z",
+    "component": {
+      "type": "application",
+      "name": "SUBSURFACE",
+      "version": "816db75bad6f",
+      "bom-ref": "pkg:generic/anticloud/SUBSURFACE@816db75bad6f",
+      "purl": "pkg:generic/anticloud/SUBSURFACE@816db75bad6f",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "816db75bad6f1eda71209a4635490d2969eadeb0"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/softwareunderground/subsurface"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "-r",
+      "version": "unspecified",
+      "purl": "pkg:pypi/-r",
+      "bom-ref": "pypi/-r@unspecified"
+    }
+  ]
+}
