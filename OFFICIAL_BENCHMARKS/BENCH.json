@@ -1,0 +1,320 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "SUBSURFACE",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\OIL_GAS\\SUBSURFACE\\UPSTREAM_CLONE",
+    "git": {
+      "head": "816db75bad6f1eda71209a4635490d2969eadeb0",
+      "url": "https://github.com/softwareunderground/subsurface",
+      "branch": "main",
+      "committed_at": "2024-06-14T08:58:46+01:00"
+    }
+  },
+  "metrics": {
+    "files_total": 225,
+    "source_files_scanned": 91,
+    "lines_of_code": 7813,
+    "languages": {
+      ".py": 120,
+      ".rst": 22,
+      ".png": 14,
+      ".txt": 12,
+      ".csv": 11,
+      "(none)": 8,
+      ".xlsx": 7,
+      ".nc": 4,
+      ".tops": 4,
+      ".sgy": 3,
+      ".dxf": 2,
+      ".dat": 2,
+      ".md": 2,
+      ".example": 1,
+      ".in": 1
+    }
+  },
+  "licence": {
+    "spdx": "Apache-2.0",
+    "class": "A",
+    "source_file": "LICENSE",
+    "redistribution_allowed": true
+  },
+  "dependencies": {
+    "count": 1,
+    "unique": 1,
+    "by_ecosystem": {
+      "pypi": 1
+    },
+    "list": [
+      {
+        "ecosystem": "pypi",
+        "name": "-r",
+        "version": "",
+        "source_file": "setup.py",
+        "raw": "-r"
+      }
+    ]
+  },
+  "owasp_top10": {
+    "total_findings": 16,
+    "files_with_findings": 15,
+    "severity": {
+      "high": 0,
+      "medium": 0,
+      "low": 16
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A03-Injection": {
+        "count": 0,
+        "findings": []
+      },
+      "A04-InsecureDesign": {
+        "count": 15,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "tests/test_io/test_lines/test_lines_I.py",
+            "line": 34,
+            "cwe": "CWE-",
+            "snippet": "# TODO: df to unstruct"
+          },
+          {
+            "severity": "low",
+            "file": "subsurface/modules/writer/to_rex/gempy_to_rexfile.py",
+            "line": 262,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Is this necessary if I pass a material"
+          },
+          {
+            "severity": "low",
+            "file": "subsurface/modules/reader/wells/DEP/pandas_to_welly.py",
+            "line": 89,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Name and uwi should be different"
+          },
+          {
+            "severity": "low",
+            "file": "subsurface/modules/reader/wells/DEP/_wells_api.py",
+            "line": 59,
+            "cwe": "CWE-",
+            "snippet": "xarray_attributes={\"wells_names\": wells_names.values.tolist()})  # TODO: This should be int16!"
+          },
+          {
+            "severity": "low",
+            "file": "subsurface/modules/reader/wells/DEP/test_wells/test_welly_to_subsurface.py",
+            "line": 295,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Maybe get rid of from_dict_advanced, as it does not show a benefit over csv?"
+          },
+          {
+            "severity": "low",
+            "file": "subsurface/modules/reader/volume/seismic.py",
+            "line": 2,
+            "cwe": "CWE-",
+            "snippet": "TODO: This is legacy code waiting to be updated to the new ideas"
+          },
+          {
+            "severity": "low",
+            "file": "subsurface/modules/reader/topography/topo_core.py",
+            "line": 45,
+            "cwe": "CWE-",
+            "snippet": "# TODO: ==================="
+          },
+          {
+            "severity": "low",
+            "file": "subsurface/modules/reader/faults/faults.py",
+            "line": 2,
+            "cwe": "CWE-",
+            "snippet": "TODO: This is legacy code waiting to be updated to the new ideas"
+          },
+          {
+            "severity": "low",
+            "file": "subsurface/core/structs/unstructured_elements/line_set.py",
+            "line": 36,
+            "cwe": "CWE-",
+            "snippet": "# TODO: these must all be integer dtypes!"
+          },
+          {
+            "severity": "low",
+            "file": "subsurface/core/structs/structured_elements/octree_mesh.py",
+            "line": 6,
+            "cwe": "CWE-",
+            "snippet": "TODO: implement as Dom discussed with data frames to track the levels."
+          },
+          {
+            "severity": "low",
+            "file": "subsurface/core/structs/structured_elements/structured_grid.py",
+            "line": 5,
+            "cwe": "CWE-",
+            "snippet": "# TODO check structured_data has three coordinates"
+          },
+          {
+            "severity": "low",
+            "file": "subsurface/core/structs/structured_elements/structured_mesh.py",
+            "line": 6,
+            "cwe": "CWE-",
+            "snippet": "# TODO check structured_data has two coordinates"
+          },
+          {
+            "severity": "low",
+            "file": "subsurface/core/structs/base_structures/unstructured_data.py",
+            "line": 60,
+            "cwe": "CWE-",
+            "snippet": "attributes: Union[None, pd.DataFrame, Dict[str, xr.DataArray]] = None  # TODO Obsolete"
+          },
+          {
+            "severity": "low",
+            "file": "docs/source/conf.py",
+            "line": 40,
+            "cwe": "CWE-",
+            "snippet": "'sphinx.ext.todo',"
+          },
+          {
+            "severity": "low",
+            "file": "docs/source/make_external_gallery.py",
+            "line": 69,
+            "cwe": "CWE-",
+            "snippet": "link=\"https://htmlpreview.github.io/?https://raw.githubusercontent.com/andieie/t21_hacksubsurface/main/gempy_to_pygimli.html\","
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 0,
+        "findings": []
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "docs/source/conf.py",
+            "line": 64,
+            "cwe": "CWE-319",
+            "snippet": "'xarray': ('http://xarray.pydata.org/en/stable/', None)"
+          }
+        ]
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 0,
+    "files_with_findings": 0,
+    "severity": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:375dda34-5283-5d56-9b50-caed295f6ab1",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-06T06:03:27Z",
+      "component": {
+        "type": "application",
+        "name": "SUBSURFACE",
+        "version": "816db75bad6f",
+        "bom-ref": "pkg:generic/anticloud/SUBSURFACE@816db75bad6f",
+        "purl": "pkg:generic/anticloud/SUBSURFACE@816db75bad6f",
+        "licenses": [
+          {
+            "license": {
+              "id": "Apache-2.0"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": "816db75bad6f1eda71209a4635490d2969eadeb0"
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/softwareunderground/subsurface"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": [
+      {
+        "type": "library",
+        "name": "-r",
+        "version": "unspecified",
+        "purl": "pkg:pypi/-r",
+        "bom-ref": "pypi/-r@unspecified"
+      }
+    ]
+  },
+  "elapsed_seconds": 9.45
+}
